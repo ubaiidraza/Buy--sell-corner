@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add New Post</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navbar section started -->
+    <section class="main-navbar  d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <p class="text-light fs-4 mt-2">Buy / Sells Corner</p>
+            </div>
+            <div id="loginDiv">
+                <div id="login" class="nav-content d-flex gap-2">
+                    <button id="logoutBtn" class="btn btn-dark   ">Logout</button>
+                    <img id="userIcon"
+                        src="https://wallpapers.com/images/featured/plain-black-background-02fh7564l8qq4m6d.jpg"
+                        alt="userIamge">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- navbar section ended -->
+
+    <!-- product details section started -->
+    <section>
+        <div class="mt-5 text-center">
+            <form id="form">
+                <h2 class="fw-bold">POST AD</h2>
+                <div class="container my-3">
+                    <div class="upload-container">
+                        <div class="ms-4">
+                            <img class="uploadFile text-center" src="./Images/Plus_rectangle.png" alt="">
+                        </div>
+                        <div class="upload-text">Upload Product Photo</div>
+                        <input id="productImage" type="file" required>
+                    </div>
+                    <div class="mt-5 d-flex flex-column gap-4" id="product_input_div">
+                        <input id="product_title" type="text" placeholder="Product Titlle" required>
+                        <input id="Product_Description" type="text" placeholder="Product Description" required>
+                        <input id="product_Price" type="number" placeholder="Enter Price" required>
+                        <input id="UserName" type="text" placeholder="Enter Your Name" required>
+                        <input id="phone_number" type="number" placeholder="Enter Phone Number" required>
+                    </div>
+                    <div id="post_add_div">
+                        <div class="d-flex justify-content-end mt-5">
+                            <button id="postNow_btn" class="btn btn-primary">Post Now</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- product details section ended -->
+
+    <!-- javascript link -->
+    <script type="module" src="./postad.js"></script>
+
+    <!-- SWEETALERT LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
+
+    <!-- bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buy / Sells Corner - Easly buy and Sell</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navbar section started -->
+    <section class="main-navbar  d-flex align-items-center">
+        <div class="container">
+            <p class="text-light fs-4 mt-2">Buy / Sells Corner</p>
+        </div>
+    </section>
+    <!-- navbar section ended -->
+
+    <!-- login section started -->
+    <section class="container">
+        <div class="login-section">
+            <form id="form" class="d-flex flex-column gap-2">
+                <input class="green" id="first_name" type="text" placeholder="First Name" required>
+                <input class="green" id="last_name" type="text" placeholder="Last Name" required>
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="text" placeholder="Password" required>
+                <input class="ps-0" type="file" id="myfile" name="myfile" required>
+                <div id="loadingDiv">
+                    <div class="text-center mt-2">
+                        <button id="registorBtn" class="btn btn-primary">Registor</button> <br>
+                    </div>
+                </div>
+                <a class="text-center" href="./login.html">ALREADY A USER? PLEASE LOGIN</a>
+            </form>
+        </div>
+    </section>
+    <!-- login section ended -->
+
+    <!-- javscript link -->
+    <script type="module" src="register.js"></script>
+
+    <!-- SWEETALERT LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.all.min.js"></script>
+
+    <!-- bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
