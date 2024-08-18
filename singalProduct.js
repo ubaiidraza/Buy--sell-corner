@@ -3,31 +3,18 @@ import { collection, getDocs, query, where } from "https://www.gstatic.com/fireb
 import { auth, db } from "../config.js";
 
 // use html element in javascript
-let logoutBtn = document.querySelector('#logoutBtn')
-let userIcon = document.querySelector('#userIcon')
-let product_title = document.querySelector('#product_title')
-let user_image = document.querySelector('#user_image')
-let phone_number = document.querySelector('#phone_number')
-let userName = document.querySelector('#userName')
-let main_product_head = document.querySelector('#main_product_head')
-let product_image = document.querySelector('#product_image')
-let whatsapp_btn = document.querySelector('#whatsapp_btn')
-let product_price = document.querySelector('#product_price')
-let product_description = document.querySelector('#product_description')
+const logoutBtn = document.querySelector('#logoutBtn')
+const userIcon = document.querySelector('#userIcon')
+const product_title = document.querySelector('#product_title')
+const user_image = document.querySelector('#user_image')
+const phone_number = document.querySelector('#phone_number')
+const userName = document.querySelector('#userName')
+const main_product_head = document.querySelector('#main_product_head')
+const product_image = document.querySelector('#product_image')
+const product_price = document.querySelector('#product_price')
+const product_description = document.querySelector('#product_description')
 
-whatsapp_btn.addEventListener('click', event => {
-    event.preventDefault()
-    Swal.fire({
-        title: 'Setting!',
-        text: 'whatsapp featuer is comming soon',
-        confirmButtonText: 'Close'
-    })
-        .then((result) => {
-            if (result.isConfirmed) {
-                // window.location = './postad.html'
-            }
-        });
-})
+
 
 let getData = JSON.parse(localStorage.getItem('sendlocal'))
 console.log(getData);
@@ -104,3 +91,5 @@ logoutBtn.addEventListener('click', () => {
         // An error happened.
     });
 })
+
+

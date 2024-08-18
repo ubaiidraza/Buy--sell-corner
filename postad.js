@@ -9,22 +9,22 @@ import {
 
 import { auth, db } from "../config.js";
 
-let storage = getStorage()
+const storage = getStorage()
 
 // use html element in javascript
-let logoutBtn = document.querySelector('#logoutBtn')
-let userIcon = document.querySelector('#userIcon')
-let loginDiv = document.querySelector('#loginDiv')
+const logoutBtn = document.querySelector('#logoutBtn')
+const userIcon = document.querySelector('#userIcon')
+const loginDiv = document.querySelector('#loginDiv')
 
-let product_title = document.querySelector('#product_title')
-let Product_Description = document.querySelector('#Product_Description')
-let product_Price = document.querySelector('#product_Price')
-let UserName = document.querySelector('#UserName')
-let phone_number = document.querySelector('#phone_number')
-let productImage = document.querySelector('#productImage')
-let form = document.querySelector('#form')
-let postNow_btn = document.querySelector('#postNow_btn')
-let uid = null
+const product_title = document.querySelector('#product_title')
+const Product_Description = document.querySelector('#Product_Description')
+const product_Price = document.querySelector('#product_Price')
+const UserName = document.querySelector('#UserName')
+const phone_number = document.querySelector('#phone_number')
+const productImage = document.querySelector('#productImage')
+const form = document.querySelector('#form')
+const postNow_btn = document.querySelector('#postNow_btn')
+const uid = null
 
 
 // check user status user login or not
@@ -34,7 +34,7 @@ onAuthStateChanged(auth, async (user) => {
         const q = query(collection(db, "users"), where("uid", "==", uid));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            let data = doc.data()
+            const data = doc.data()
             userIcon.src = data.photoUrl
         });
     } else {
@@ -48,8 +48,8 @@ form.addEventListener('submit', async event => {
     event.preventDefault()
     postNow_btn.innerHTML = `<img class="loading" src="./Images/load-37_256.gif" alt="">`
 
-    let file = productImage.files[0]
-    let url = await uploadFile(file, `${uid} + ${Date.now()}`)
+    const file = productImage.files[0]
+    const url = await uploadFile(file, `${uid} + ${Date.now()}`)
 
     try {
         const docRef = await addDoc(collection(db, "product_details"), {

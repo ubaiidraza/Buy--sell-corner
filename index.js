@@ -3,11 +3,11 @@ import { collection, getDocs, query, where } from "https://www.gstatic.com/fireb
 import { auth, db } from "../config.js";
 
 // use html element in javascript
-let logoutBtn = document.querySelector('#logoutBtn')
-let userIcon = document.querySelector('#userIcon')
-let loginDiv = document.querySelector('#loginDiv')
-let card_section  = document.querySelector('.card_section ')
-let text_silder  = document.querySelector('#text_silder ')
+const logoutBtn = document.querySelector('#logoutBtn')
+const userIcon = document.querySelector('#userIcon')
+const loginDiv = document.querySelector('#loginDiv')
+const card_section  = document.querySelector('.card_section ')
+const text_silder  = document.querySelector('#text_silder ')
 
 // check user status user login or not
 onAuthStateChanged(auth, async (user) => {
@@ -16,7 +16,7 @@ onAuthStateChanged(auth, async (user) => {
         const q = query(collection(db, "users"), where("uid", "==", uid));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            let data = doc.data()
+            const data = doc.data()
             userIcon.src = data.photoUrl
         });
     } else {
@@ -58,12 +58,12 @@ logoutBtn.addEventListener('click', () => {
     });
 })
 
-let productData = [];
+const productData = [];
 
 async function renderScreen() {
     const querySnapshot = await getDocs(collection(db, "product_details"));
     querySnapshot.forEach((doc) => {
-        let data = doc.data()
+        const data = doc.data()
         productData.push(data)
         // console.log(productData);
     });
@@ -83,7 +83,7 @@ async function renderScreen() {
             </div>
             `
 
-            let adToCard = document.querySelectorAll('#adToCard')
+            const adToCard = document.querySelectorAll('#adToCard')
 
             adToCard.forEach((btn, index) => {
                 btn.addEventListener('click', ()=> {

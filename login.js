@@ -2,10 +2,10 @@ import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/1
 import { auth } from "../config.js";
 
 // html element use in javascript!
-let form = document.querySelector("#form")
-let email = document.querySelector("#email")
-let password = document.querySelector("#password")
-let loginBtn = document.querySelector("#loginBtn")
+const form = document.querySelector("#form")
+const email = document.querySelector("#email")
+const password = document.querySelector("#password")
+const loginBtn = document.querySelector("#loginBtn")
 
 // get input value and check user login
 form.addEventListener('submit', event => {

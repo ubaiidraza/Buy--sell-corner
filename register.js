@@ -11,16 +11,16 @@ import {
 import { auth } from "../config.js";
 import { db } from "../config.js";
 
-let storage = getStorage()
+const storage = getStorage()
 
 // html element use in javascript!
-let form = document.querySelector("#form")
-let email = document.querySelector("#email")
-let password = document.querySelector("#password")
-let firet_name = document.querySelector("#first_name")
-let last_name = document.querySelector("#last_name")
-let myfile = document.querySelector("#myfile")
-let registorBtn = document.querySelector("#registorBtn")
+const form = document.querySelector("#form")
+const email = document.querySelector("#email")
+const password = document.querySelector("#password")
+const firet_name = document.querySelector("#first_name")
+const last_name = document.querySelector("#last_name")
+const myfile = document.querySelector("#myfile")
+const registorBtn = document.querySelector("#registorBtn")
 
 // registor user and save data into firestore
 form.addEventListener('submit', event => {
@@ -32,8 +32,8 @@ form.addEventListener('submit', event => {
         console.log(user);
         registorBtn.innerHTML = `<img class="loading" src="./Assets/Images/load-37_256.gif" alt="">`
 
-            let file = myfile.files[0]
-            let url = null
+            const file = myfile.files[0]
+            const url = null
             if (file) {
                 url = await uploadFile(file, email.value)
                 console.log(url);
